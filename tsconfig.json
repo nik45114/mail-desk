@@ -1,0 +1,7 @@
+{
+  "extends": "./.orca/types/tsconfig.json",
+  "compilerOptions": { "types": ["node", "orca", "orca-host", "orca-frame", "orca-worker", "orca-services", "orca-testing"], "typeRoots": ["./node_modules/@types", "./.orca/types"] },
+  "include": [
+    "src"
+  ]
+}

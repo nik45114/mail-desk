@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 2,
+  "id": "gmail-desk",
+  "name": "Mail Desk",
+  "version": "0.3.0",
+  "description": "Multi-account mail panel for Gmail, Outlook and IMAP/SMTP, with a companion MCP server. Preview: Google test access or your own OAuth client; Outlook needs your Microsoft app registration.",
+  "license": "MIT",
+  "author": {
+    "name": "nik45114",
+    "url": "https://github.com/nik45114"
+  },
+  "repository": "https://github.com/nik45114/mail-desk",
+  "homepage": "https://github.com/nik45114/mail-desk",
+  "icon": "assets/icon.png",
+  "cover": {
+    "path": "assets/cover.png",
+    "alt": "Illustration of Mail Desk with Gmail, Outlook and IMAP/SMTP accounts beside an envelope icon"
+  },
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "execution": "trusted-worker",
+  "pluginApi": 1,
+  "main": "dist/worker/accounts.js",
+  "contributes": {
+    "panels": [
+      {
+        "id": "gmail-desk",
+        "title": "Mail Desk",
+        "icon": "file-text",
+        "entry": "src/panel.tsx",
+        "ui": "components"
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "kind": "secrets:own"
+    }
+  ]
+}
